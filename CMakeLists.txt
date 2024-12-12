@@ -17,10 +17,7 @@ if(NOT EXISTS ${VAMP_SDK_PATH})
     vamp-plugin-sdk
     GIT_REPOSITORY https://github.com/vamp-plugins/vamp-plugin-sdk.git
     GIT_TAG        ${VAMP_SDK_TAG}
-    CONFIGURE_COMMAND ""
     PATCH_COMMAND  ${GIT_EXECUTABLE} reset --hard && ${GIT_EXECUTABLE} clean -fxd && ${GIT_EXECUTABLE} apply ${CMAKE_CURRENT_SOURCE_DIR}/Patchs/Add-IVE-support.patch
-    BUILD_COMMAND  ""
-    INSTALL_COMMAND ""
     UPDATE_DISCONNECTED TRUE
     EXCLUDE_FROM_ALL
   )
